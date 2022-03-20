@@ -64,4 +64,29 @@ jobs:
           cd taps/tap-sofifa
           poetry run pytest
 
+  test-tap-statbunker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+      - name: Set up Poetry
+        uses: Gr1N/setup-poetry@v7
+      - name: Set up Chrome and Chromedriver
+        run: |
+          cd .github
+          chmod +x install_chrome_chromedriver.sh
+          ./install_chrome_chromedriver.sh
+        shell: bash
+      - name: Install dependencies
+        run: |
+          cd taps/tap-statbunker
+          poetry install
+      - name: Run Tests for Tap Statbunker
+        run: |
+          cd taps/tap-statbunker
+          poetry run pytest
+
 
