@@ -14,6 +14,7 @@ jobs:
       - name: Set up Chrome and Chromedriver
         run: |
           cd .github
+          chmod +x install_chrome_chromedriver.sh
           ./install_chrome_chromedriver.sh
         shell: bash
       - name: Run Tests for Tap FPL
