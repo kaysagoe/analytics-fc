@@ -17,15 +17,38 @@ jobs:
           chmod +x install_chrome_chromedriver.sh
           ./install_chrome_chromedriver.sh
         shell: bash
-      - name: Run Tests for Tap FPL
+      - name: Install dependencies
         run: |
           cd taps/tap-fpl
           poetry install
+      - name: Run Tests for Tap FPL
+        run: |
+          cd taps/tap-fpl
           poetry run pytest
+          
+  test-tap-apifootball:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+      - name: Set up Poetry
+        uses: Gr1N/setup-poetry@v7
+      - name: Set up Chrome and Chromedriver
+        run: |
+          cd .github
+          chmod +x install_chrome_chromedriver.sh
+          ./install_chrome_chromedriver.sh
+        shell: bash
+      - name: Install dependencies
+        run: |
+          cd taps/tap-apifootball
+          poetry install
       - name: Run Tests for Tap APIFootball
         run: |
           cd taps/tap-apifootball
-          poetry update
           poetry run pytest
 
 
