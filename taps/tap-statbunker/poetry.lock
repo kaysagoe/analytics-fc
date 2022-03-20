@@ -594,6 +594,22 @@ toml = "*"
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
 [[package]]
+name = "pytest-httpserver"
+version = "1.0.4"
+description = "pytest-httpserver is a httpserver for pytest"
+category = "dev"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[package.dependencies]
+Werkzeug = ">=2.0.0"
+
+[package.extras]
+dev = ["autopep8", "coverage", "flake8 (>4.0.0)", "ipdb", "mypy", "pytest-cov", "pytest", "reno", "requests", "sphinx", "sphinx-rtd-theme", "types-requests"]
+test = ["coverage", "flake8 (>4.0.0)", "mypy", "pytest-cov", "pytest", "requests", "types-requests"]
+doc = ["reno", "sphinx", "sphinx-rtd-theme"]
+
+[[package]]
 name = "python-dateutil"
 version = "2.8.2"
 description = "Extensions to the standard Python datetime module"
@@ -854,7 +870,7 @@ python-versions = "*"
 
 [[package]]
 name = "types-requests"
-version = "2.27.13"
+version = "2.27.14"
 description = "Typing stubs for requests"
 category = "dev"
 optional = false
@@ -919,6 +935,17 @@ docs = ["proselint (>=0.10.2)", "sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sp
 testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", "pytest (>=4)", "pytest-env (>=0.6.2)", "pytest-freezegun (>=0.4.1)", "pytest-mock (>=2)", "pytest-randomly (>=1)", "pytest-timeout (>=1)", "packaging (>=20.0)"]
 
 [[package]]
+name = "werkzeug"
+version = "2.0.3"
+description = "The comprehensive WSGI web application library."
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+watchdog = ["watchdog"]
+
+[[package]]
 name = "wsproto"
 version = "1.1.0"
 description = "WebSockets state-machine based protocol implementation"
@@ -944,7 +971,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.11,>=3.7.1"
-content-hash = "2707bc55f6d020674bf19c65238c680a6e1b8a796d8e6c15175c317f2d83acc6"
+content-hash = "b778235a9642f4e8438eecab5c0e52ee75ad97afdfb6961d7cd2865018d08ac7"
 
 [metadata.files]
 async-generator = [
@@ -1326,6 +1353,10 @@ pytest = [
     {file = "pytest-6.2.5-py3-none-any.whl", hash = "sha256:7310f8d27bc79ced999e760ca304d69f6ba6c6649c0b60fb0e04a4a77cacc134"},
     {file = "pytest-6.2.5.tar.gz", hash = "sha256:131b36680866a76e6781d13f101efb86cf674ebb9762eb70d3082b6f29889e89"},
 ]
+pytest-httpserver = [
+    {file = "pytest_httpserver-1.0.4-py3-none-any.whl", hash = "sha256:17396350d7c0dec067bc8c5ceca7e1137aa0e3395468a9c179bdfc5ede9027a5"},
+    {file = "pytest_httpserver-1.0.4.tar.gz", hash = "sha256:6de464ba5f74628d6182ebbdcb56783edf2c9b0caf598dc35c11f014f24a3f0d"},
+]
 python-dateutil = [
     {file = "python-dateutil-2.8.2.tar.gz", hash = "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"},
     {file = "python_dateutil-2.8.2-py2.py3-none-any.whl", hash = "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"},
@@ -1479,8 +1510,8 @@ typed-ast = [
     {file = "typed_ast-1.4.3.tar.gz", hash = "sha256:fb1bbeac803adea29cedd70781399c99138358c26d05fcbd23c13016b7f5ec65"},
 ]
 types-requests = [
-    {file = "types-requests-2.27.13.tar.gz", hash = "sha256:cf0646031dd6307113b37814f743c04f0707a3357378c2bb1326f848412f5ba9"},
-    {file = "types_requests-2.27.13-py3-none-any.whl", hash = "sha256:5d6f77f3c7565659bdb7b7bce1d33d1abb7d0b056138cac714860e13da2f19df"},
+    {file = "types-requests-2.27.14.tar.gz", hash = "sha256:04579ee164f7c2659be46950e3c2f8d51a081ad252ef1b01d4b12faba5c3810b"},
+    {file = "types_requests-2.27.14-py3-none-any.whl", hash = "sha256:c01838abfe3e8a83ba68346cd373afff97594c19c15c922ddee4a0e80ba7e329"},
 ]
 types-urllib3 = [
     {file = "types-urllib3-1.26.11.tar.gz", hash = "sha256:24d64e441168851eb05f1d022de18ae31558f5649c8f1117e384c2e85e31315b"},
@@ -1497,6 +1528,10 @@ urllib3 = [
 virtualenv = [
     {file = "virtualenv-20.13.4-py2.py3-none-any.whl", hash = "sha256:c3e01300fb8495bc00ed70741f5271fc95fed067eb7106297be73d30879af60c"},
     {file = "virtualenv-20.13.4.tar.gz", hash = "sha256:ce8901d3bbf3b90393498187f2d56797a8a452fb2d0d7efc6fd837554d6f679c"},
+]
+werkzeug = [
+    {file = "Werkzeug-2.0.3-py3-none-any.whl", hash = "sha256:1421ebfc7648a39a5c58c601b154165d05cf47a3cd0ccb70857cbdacf6c8f2b8"},
+    {file = "Werkzeug-2.0.3.tar.gz", hash = "sha256:b863f8ff057c522164b6067c9e28b041161b4be5ba4d0daceeaa50a163822d3c"},
 ]
 wsproto = [
     {file = "wsproto-1.1.0-py3-none-any.whl", hash = "sha256:2218cb57952d90b9fca325c0dcfb08c3bda93e8fd8070b0a17f048e2e47a521b"},
