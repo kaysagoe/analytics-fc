@@ -29,13 +29,15 @@ jobs:
           unzip chromedriver_linux64.zip && chmod +x chromedriver && sudo mv chromedriver /usr/local/bin
           chromedriver -version
         shell: bash
-      - name: Install dependencies
+      - name: Run Tests for Tap FPL
         run: |
           cd taps/tap-fpl
           poetry install
-      - name: Run Tests
+          poetry run pytest
+      - name: Run Tests for Tap APIFootball
         run: |
-          cd taps/tap-fpl
+          cd taps/tap-apifootball
+          poetry update
           poetry run pytest
 
 
