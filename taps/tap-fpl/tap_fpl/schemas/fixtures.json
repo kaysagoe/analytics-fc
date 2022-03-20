@@ -1,0 +1,92 @@
+{
+    "type": "object",
+    "properties": {
+        "code": {
+            "type": ["null", "integer"]
+        },
+        "event": {
+            "type": ["null", "integer"]
+        },
+        "finished": {
+            "type": ["null", "boolean"]
+        },
+        "finished_provisional": {
+            "type": ["null", "boolean"]
+        },
+        "id": {
+            "type": "integer"
+        },
+        "kickoff_time": {
+            "type": ["null", "string"]
+        },
+        "minutes": {
+            "type": ["null", "integer"]
+        },
+        "provisional_start_time": {
+            "type": ["null", "boolean"]
+        },
+        "started": {
+            "type": ["null", "boolean"]
+        },
+        "team_a": {
+            "type": ["null", "integer"]
+        },
+        "team_a_score": {
+            "type": ["null", "integer"]
+        },
+        "team_h": {
+            "type": ["null", "integer"]
+        },
+        "team_h_score": {
+            "type": ["null", "integer"]
+        },
+        "stats": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "type": ["null", "string"]
+                    },
+                    "a": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "type": ["null", "integer"]
+                                },
+                                "element": {
+                                    "type": ["null", "integer"]
+                                }
+                            }
+                        }
+                    },
+                    "h": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "type": ["null", "integer"]
+                                },
+                                "element": {
+                                    "type": ["null", "integer"]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "team_h_difficulty": {
+            "type": ["null", "integer"]
+        },
+        "team_a_difficulty": {
+            "type": ["null", "integer"]
+        },
+        "pulse_id": {
+            "type": ["null", "integer"]
+        }
+    }
+}

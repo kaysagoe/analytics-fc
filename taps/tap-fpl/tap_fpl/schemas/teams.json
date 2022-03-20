@@ -1,0 +1,70 @@
+{
+    "type": "object",
+    "properties": {
+        "code": {
+            "type": "integer"
+        },
+        "draw": {
+            "type": "integer"
+        },
+        "form": {
+            "type": "null"
+        },
+        "id": {
+            "type": "integer",
+            "description": "The ID of the team"
+        },
+        "loss": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the team"
+        },
+        "played": {
+            "type": "integer"
+        },
+        "points": {
+            "type": "integer"
+        },
+        "position": {
+            "type": "integer"
+        },
+        "short_name": {
+            "type": "string"
+        },
+        "strength": {
+            "type": "integer"
+        },
+        "team_division": {
+            "type": "null"
+        },
+        "unavailable": {
+            "type": "boolean"
+        },
+        "win": {
+            "type": "integer"
+        },
+        "strength_overall_home": {
+            "type": "integer"
+        },
+        "strength_overall_away": {
+            "type": "integer"
+        },
+        "strength_attack_home": {
+            "type": "integer"
+        },
+        "strength_attack_away": {
+            "type": "integer"
+        },
+        "strength_defence_home": {
+            "type": "integer"
+        },
+        "strength_defence_away": {
+            "type": "integer"
+        },
+        "pulse_id": {
+            "type": "integer"
+        }
+    }
+}

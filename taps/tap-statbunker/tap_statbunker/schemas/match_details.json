@@ -1,0 +1,85 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "comp_id": {
+            "type": "integer"
+        },
+        "teams": {
+            "type": "object",
+            "properties": {
+                "home": {
+                    "type": "string"
+                },
+                "away": {
+                    "type": "string"
+                }
+            }
+        },
+        "goals": {
+            "type": "object",
+            "properties": {
+                "home": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "minute": {
+                                "type": "integer"
+                            },
+                            "scorer": {
+                                "type": "string"
+                            },
+                            "assister": {
+                                "type": ["string", "null"]
+                            },
+                            "foot": {
+                                "type": "string"
+                            },
+                            "shot_direction": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "distance": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                "away": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "minute": {
+                                "type": "integer"
+                            },
+                            "scorer": {
+                                "type": "string"
+                            },
+                            "assister": {
+                                "type": ["string", "null"]
+                            },
+                            "foot": {
+                                "type": "string"
+                            },
+                            "shot_direction": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "distance": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

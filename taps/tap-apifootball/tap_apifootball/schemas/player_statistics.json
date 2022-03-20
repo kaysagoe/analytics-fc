@@ -1,0 +1,201 @@
+{
+    "type": "object",
+    "properties": {
+        "team": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "logo": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "string"
+                }
+            }
+        },
+        "players": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "player": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "photo": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "statistics": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "games": {
+                                    "type": "object",
+                                    "properties": {
+                                        "minutes": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "number": {
+                                            "type": "integer"
+                                        },
+                                        "position": {
+                                            "type": "string"
+                                        },
+                                        "rating": {
+                                            "type": ["string", "null"]
+                                        },
+                                        "captain": {
+                                            "type": "boolean"
+                                        },
+                                        "substitute": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                },
+                                "offsides": {
+                                    "type": ["null", "integer"]
+                                },
+                                "shots": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "on": {
+                                            "type": ["null", "integer"]
+                                        }
+                                    }
+                                },
+                                "goals": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "conceded": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "assists": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "saves": {
+                                            "type": ["null", "integer"]
+                                        }
+                                    }
+                                },
+                                "passes": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "key": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "accuracy": {
+                                            "type": ["null", "string"]
+                                        }
+                                    }
+                                },
+                                "tackles": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "blocks": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "interceptions": {
+                                            "type": ["null", "integer"]
+                                        }
+                                    }
+                                },
+                                "duels": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "won": {
+                                            "type": ["null", "integer"]
+                                        }
+                                    }
+                                },
+                                "dribbles": {
+                                    "type": "object",
+                                    "properties": {
+                                        "attempts": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "success": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "past": {
+                                            "type": ["null", "integer"]
+                                        }
+                                    }
+                                },
+                                "fouls": {
+                                    "type": "object",
+                                    "properties": {
+                                        "drawn": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "committed": {
+                                            "type": ["null", "integer"]
+                                        }
+                                    }
+                                },
+                                "cards": {
+                                    "type": "object",
+                                    "properties": {
+                                        "yellow": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "red": {
+                                            "type": ["null", "integer"]
+                                        }
+                                    }
+                                },
+                                "penalty": {
+                                    "type": "object",
+                                    "properties": {
+                                        "won": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "committed": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "scored": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "missed": {
+                                            "type": ["null", "integer"]
+                                        },
+                                        "saved": {
+                                            "type": ["null", "integer"]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

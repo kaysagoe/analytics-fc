@@ -1,0 +1,12 @@
+{
+    "streams": [
+        {
+            "tap_stream_id": "element-types",
+            "replication_method": "FULL_TABLE",
+            "key_properties": [
+              "id"
+            ],
+            "stream": "element-types"
+        }
+    ]
+}

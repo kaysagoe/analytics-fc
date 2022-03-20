@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  dwh:
+    image: postgres:14
+    restart: always
+    container_name: dwh
+    environment:
+      POSTGRES_PASSWORD: analytics-fc
+      POSTGRES_USER: analytics-fc
+      POSTGRES_DB: dwh
+    ports:
+      - 5432:5432
+    volumes:
+      - dwh_data:/var/lib/postgresql/data
+volumes:
+  dwh_data:

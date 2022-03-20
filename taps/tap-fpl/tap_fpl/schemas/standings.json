@@ -1,0 +1,96 @@
+{
+    "type": "object",
+    "properties": {
+        "league_id": {
+            "type": ["null", "integer"]
+        },
+        "last_updated_data": {
+            "type": "string"
+        },
+        "league": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": ["null", "integer"]
+                },
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "created": {
+                    "type": ["null", "string"]
+                },
+                "closed": {
+                    "type": ["null", "boolean"]
+                },
+                "max_entries": {
+                    "type": ["null", "integer"]
+                },
+                "league_type": {
+                    "type": ["null", "string"]
+                },
+                "scoring": {
+                    "type": ["null", "string"]
+                },
+                "admin_entry": {
+                    "type": ["null", "integer"]
+                },
+                "start_event": {
+                    "type": ["null", "integer"]
+                },
+                "code_privacy": {
+                    "type": ["null", "string"]
+                },
+                "has_cup": {
+                    "type": ["null", "boolean"]
+                },
+                "cup_league": {
+                    "type": ["null", "integer"]
+                },
+                "rank": {
+                    "type": ["null", "integer"]
+                }
+            }
+        },
+        "standings": {
+            "type": "object",
+            "properties": {
+                "results": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": ["null", "integer"]
+                            },
+                            "event_total": {
+                                "type": ["null", "integer"]
+                            },
+                            "player_name": {
+                                "type": ["null", "string"]
+                            },
+                            "rank": {
+                                "type": ["null", "integer"]
+                            },
+                            "last_rank": {
+                                "type": ["null", "integer"]
+                            },
+                            "rank_sort": {
+                                "type": ["null", "integer"]
+                            },
+                            "total": {
+                                "type": ["null", "integer"]
+                            },
+                            "entry": {
+                                "type": ["null", "integer"]
+                            },
+                            "entry_name": {
+                                "type": ["null", "string"]
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

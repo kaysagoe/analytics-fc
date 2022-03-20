@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "plural_name": {
+            "type": "string"
+        },
+        "plural_name_short": {
+            "type": "string"
+        },
+        "singular_name": {
+            "type": "string"
+        },
+        "singular_name_short": {
+            "type": "string"
+        },
+        "squad_select": {
+            "type": "integer"
+        },
+        "squad_min_play": {
+            "type": "integer"
+        },
+        "squad_max_play": {
+            "type": "integer"
+        },
+        "ui_shirt_specific": {
+            "type": "boolean"
+        },
+        "sub_positions_locked": {
+            "type": "array",
+            "items": {
+                "type": "integer"
+            }
+        },
+        "element_count": {
+            "type": "integer"
+        }
+    }
+}

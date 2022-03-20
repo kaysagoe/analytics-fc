@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "timestamp": {
+            "type": "string"
+        },
+        "r": {
+            "type": "string"
+        },
+        "set": {
+            "type": "string"
+        }
+    }
+}

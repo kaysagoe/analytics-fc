@@ -1,0 +1,233 @@
+{
+    "type": "object",
+    "properties": {
+        "player_id": {
+            "type": ["null", "integer"]
+        },
+        "fixtures": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": ["null", "integer"]
+                    },
+                    "code": {
+                        "type": ["null", "integer"]
+                    },
+                    "team_h": {
+                        "type": ["null", "integer"]
+                    },
+                    "team_h_score": {
+                        "type": ["null", "integer"]
+                    },
+                    "team_a": {
+                        "type": ["null", "integer"]
+                    },
+                    "event": {
+                        "type": ["null", "integer"]
+                    },
+                    "finished": {
+                        "type": ["null", "boolean"]
+                    },
+                    "minutes": {
+                        "type": ["null", "integer"]
+                    },
+                    "provisional_start_time": {
+                        "type": ["null", "boolean"]
+                    },
+                    "kickoff_time": {
+                        "type": ["null", "string"]
+                    },
+                    "event_name": {
+                        "type": ["null", "string"]
+                    },
+                    "is_home": {
+                        "type": ["null", "boolean"]
+                    },
+                    "difficulty": {
+                        "type": ["null", "integer"]
+                    }
+                }
+            }
+        },
+        "history": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "element": {
+                        "type": ["null", "integer"]
+                    },
+                    "fixture": {
+                        "type": ["null", "integer"]
+                    },
+                    "opponent_team": {
+                        "type": ["null", "integer"]
+                    },
+                    "total_points": {
+                        "type": ["null", "integer"]
+                    },
+                    "was_home": {
+                        "type": ["null", "boolean"]
+                    },
+                    "kickoff_time": {
+                        "type": ["null", "string"]
+                    },
+                    "team_h_score": {
+                        "type": ["null", "integer"]
+                    },
+                    "team_a_score": {
+                        "type": ["null", "integer"]
+                    },
+                    "round": {
+                        "type": ["null", "integer"]
+                    },
+                    "minutes": {
+                        "type": ["null", "integer"]
+                    },
+                    "goals_scored": {
+                        "type": ["null", "integer"]
+                    },
+                    "assists": {
+                        "type": ["null", "integer"]
+                    },
+                    "clean_sheets": {
+                        "type": ["null", "integer"]
+                    },
+                    "goals_conceded": {
+                        "type": ["null", "integer"]
+                    },
+                    "own_goals": {
+                        "type": ["null", "integer"]
+                    },
+                    "penalties_saved": {
+                        "type": ["null", "integer"]
+                    },
+                    "penalties_missed": {
+                        "type": ["null", "integer"]
+                    },
+                    "yellow_cards": {
+                        "type": ["null", "integer"]
+                    },
+                    "red_cards": {
+                        "type": ["null", "integer"]
+                    },
+                    "saves": {
+                        "type": ["null", "integer"]
+                    },
+                    "bonus": {
+                        "type": ["null", "integer"]
+                    },
+                    "bps": {
+                        "type": ["null", "integer"]
+                    },
+                    "influence": {
+                        "type": ["null", "string"]
+                    },
+                    "creativity": {
+                        "type": ["null", "string"]
+                    },
+                    "threat": {
+                        "type": ["null", "string"]
+                    },
+                    "ict_index": {
+                        "type": ["null", "string"]
+                    },
+                    "value": {
+                        "type": ["null", "integer"]
+                    },
+                    "transfers_balance": {
+                        "type": ["null", "integer"]
+                    },
+                    "selected": {
+                        "type": ["null", "integer"]
+                    },
+                    "transfers_in": {
+                        "type": ["null", "integer"]
+                    },
+                    "transfers_out": {
+                        "type": ["null", "integer"]
+                    }
+                }
+            }
+        },
+        "history_past": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "season_name": {
+                        "type": ["null", "string"]
+                    },
+                    "element_code": {
+                        "type": ["null", "integer"]
+                    },
+                    "start_cost": {
+                        "type": ["null", "integer"]
+                    },
+                    "end_cost": {
+                        "type": ["null", "integer"]
+                    },
+                    "total_points": {
+                        "type": ["null", "integer"]
+                    },
+                    "minutes": {
+                        "type": ["null", "integer"]
+                    },
+                    "goals_scored": {
+                        "type": ["null", "integer"]
+                    },
+                    "assists": {
+                        "type": ["null", "integer"]
+                    },
+                    "clean_sheets": {
+                        "type": ["null", "integer"]
+                    },
+                    "goals_conceded": {
+                        "type": ["null", "integer"]
+                    },
+                    "own_goals": {
+                        "type": ["null", "integer"]
+                    },
+                    "penalties_saved": {
+                        "type": ["null", "integer"]
+                    },
+                    "penalties_missed": {
+                        "type": ["null", "integer"]
+                    },
+                    "yellow_cards": {
+                        "type": ["null", "integer"]
+                    },
+                    "red_cards": {
+                        "type": ["null", "integer"]
+                    },
+                    "saves": {
+                        "type": ["null", "integer"]
+                    },
+                    "bonus": {
+                        "type": ["null", "integer"]
+                    },
+                    "bps": {
+                        "type": ["null", "integer"]
+                    },
+                    "influence": {
+                        "type": ["null", "string"]
+                    },
+                    "creativity": {
+                        "type": ["null", "string"]
+                    },
+                    "threat": {
+                        "type": ["null", "string"]
+                    },
+                    "ict_index": {
+                        "type": ["null", "string"]
+                    },
+                    "value": {
+                        "type": ["null", "integer"]
+                    }
+                }
+            }
+        }
+    }
+}

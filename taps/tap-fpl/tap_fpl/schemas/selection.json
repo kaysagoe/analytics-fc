@@ -1,0 +1,95 @@
+{
+    "type": "object",
+    "properties": {
+        "manager_id": {
+            "type": ["null", "integer"]
+        },
+        "gameweek": {
+            "type": ["null", "integer"]
+        },
+        "active_chip": {
+            "type": ["null", "string"]
+        },
+        "automatic_subs": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "entry": {
+                        "type": "integer"
+                    },
+                    "element_in": {
+                        "type": "integer"
+                    },
+                    "element_out": {
+                        "type": "integer"
+                    },
+                    "event": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "entry_history": {
+            "type": "object",
+            "properties": {
+                "event": {
+                    "type": "integer"
+                },
+                "points": {
+                    "type": "integer"
+                },
+                "total_points" : {
+                    "type": "integer"
+                },
+                "rank": {
+                    "type": "integer"
+                },
+                "rank_sort": {
+                    "type": "integer"
+                },
+                "overall_rank": {
+                    "type": "integer"
+                },
+                "bank": {
+                    "type": "integer"
+                },
+                "value": {
+                    "type": "integer"
+                },
+                "event_transfers": {
+                    "type": "integer"
+                },
+                "event_transfers_cost": {
+                    "type": "integer"
+                },
+                "points_on_bench": {
+                    "type": "integer"
+                }
+            }
+        },
+        "picks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "element": {
+                        "type": "integer"
+                    },
+                    "position": {
+                        "type": "integer"
+                    },
+                    "multiplier": {
+                        "type": "integer"
+                    },
+                    "is_captain": {
+                        "type": "boolean"
+                    },
+                    "is_vice_captain": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        }
+    }
+}

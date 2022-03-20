@@ -1,0 +1,89 @@
+version: 1
+send_anonymous_usage_stats: true
+project_id: 609c52ea-e101-4d4f-a179-014cc80989fb
+plugins:
+  extractors:
+  - name: tap-fpl
+    namespace: tap_fpl
+    pip_url: -e ./taps/tap-fpl
+    settings:
+    - name: managers
+    - name: gameweeks
+    - name: players
+    - name: league_id
+    load_schema: raw_fpl
+  - name: tap-apifootball
+    namespace: tap_apifootball
+    pip_url: -e ./taps/tap-apifootball
+    settings:
+    - name: fixtures_league
+    - name: fixtures_season
+    - name: statistics_fixture
+    - name: events_fixture
+    - name: lineups_fixture
+    - name: player_statistics_fixture
+    - name: api_key
+    load_schema: raw_api_football
+  loaders:
+  - name: target-postgres
+    variant: transferwise
+    pip_url: pipelinewise-target-postgres
+    config:
+      primary_key_required: false
+  - name: target-tester
+    namespace: target_tester
+    pip_url: -e ./target-tester
+environments:
+- name: dev-local
+  config:
+    plugins:
+      extractors:
+      - name: tap-apifootball
+        config:
+          fixtures_league: 39
+          fixtures_season: 2021
+          statistics_fixture: 710557
+          events_fixture: 710557
+          lineups_fixture: 710557
+          player_statistics_fixture: 710557
+      - name: tap-fpl
+        config:
+          managers:
+          - 2045181
+          - 1001292
+          gameweeks:
+          - 23
+          - 22
+          league_id: 180733
+          players:
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+      loaders:
+      - name: target-postgres
+        config:
+          user: analytics-fc
+          password: analytics-fc
+          host: 0.0.0.0
+          port: 5432
+          dbname: dwh
+- name: dev-docker
+  config:
+    plugins:
+      loaders:
+      - name: target-postgres
+        config:
+          user: analytics-fc
+          password: analytics-fc
+          host: dwh
+          port: 5432
+          dbname: dwh
+- name: ci
+- name: prod

@@ -1,0 +1,115 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The event ID",
+            "type": "integer"
+        },
+        "name": {
+            "description": "The gameweek name",
+            "type": "string"
+        },
+        "deadline_time": {
+            "description": "The gameweek lineup submission deadline",
+            "type": "string"
+        },
+        "average_entry_score": {
+            "description": "The average points of all teams in the game week",
+            "type": "integer"
+        },
+        "finished": {
+            "description": "The flag representing whether the gameweek is completed",
+            "type": "boolean"
+        },
+        "data_checked": {
+            "type": "boolean"
+        },
+        "highest_scoring_entry": {
+            "description": "The ID of the team with highest number of points in the gameweek",
+            "type": ["null", "integer"]
+        },
+        "deadline_time_epoch": {
+            "description": "The gameweek lineup submission deadline in epochs",
+            "type": "integer"
+        },
+        "deadline_time_game_offset": {
+            "type": "integer"
+        },
+        "highest_score": {
+            "description": "The highest team score in the gameweek",
+            "type": ["null", "integer"]
+        },
+        "is_previous": {
+            "description": "The flag representing whether the gameweek is the gameweek before the current gameweek",
+            "type": "boolean"
+        },
+        "is_current": {
+            "description": "The flag representing whether the gameweek is the current gameweek",
+            "type": "boolean"
+        },
+        "is_next": {
+            "description": "The flag representing whether the gameweek is the gameweek after the current gameweek",
+            "type": "boolean"
+        },
+        "cup_leagues_created": {
+            "type": "boolean"
+        },
+        "h2h_ko_matches_created": {
+            "type": "boolean"
+        },
+        "chip_plays": {
+            "description": "The chips played in the gameweek",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "chip_name": {
+                        "description": "The name of the chip played",
+                        "type": "string"
+                    },
+                    "num_played": {
+                        "description": "The number of teams that played the chip",
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "most_selected": {
+            "description": "The ID of the player that was selected in the most in the gameweek",
+            "type": ["null", "integer"]
+        },
+        "most_transferred_in": {
+            "description": "The ID of the player that was transferred in the most in the gameweek",
+            "type": ["null", "integer"]
+        },
+        "top_element": {
+            "description": "The ID of the player with most points in the gameweek",
+            "type": ["null", "integer"]
+        },
+        "top_element_info": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": {
+                    "description": "The ID of the player with the most points in the gameweek",
+                    "type": "integer"
+                },
+                "points": {
+                    "description": "The number of points of the highest scoring player in the gameweek",
+                    "type": "integer"
+                }
+            }
+        },
+        "transfers_made": {
+            "description": "The total number of transferred made in the gameweek",
+            "type": "integer"
+        },
+        "most_captained": {
+            "description": "The ID of the most captained player in the gameweek",
+            "type": ["null", "integer"]
+        },
+        "most_vice_captained": {
+            "description": "The ID of the ost vice-captained player in the gameweek",
+            "type": ["null", "integer"]
+        }
+    }
+}

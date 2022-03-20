@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "managers": {
+            "type": "array",
+            "items": {
+                "type": "integer"
+            },
+            "default": [] 
+        },
+        "gameweeks": {
+            "type": "array",
+            "items": {
+                "type": "integer"
+            },
+            "default": []
+        },
+        "players": {
+            "type": "array",
+            "items": {
+                "type": "integer"
+            },
+            "default": []
+        }
+    },
+    "required": ["managers", "gameweeks", "players"]
+}

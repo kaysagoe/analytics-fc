@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "api_key": {
+            "type": "string"
+        },
+        "fixtures_id": {
+            "type": "integer"
+        },
+        "fixtures_live": {
+            "enum": ["all", "id-id"]
+        },
+        "fixtures_date": {
+            "type": "string"
+        },
+        "fixtures_season": {
+            "type": "integer"
+        },
+        "fixtures_team": {
+            "type": "integer"
+        },
+        "fixtures_last": {
+            "type": "integer"   
+        },
+        "fixtures_next": {
+            "type": "integer"
+        },
+        "fixtures_from": {
+            "type": "string"
+        },
+        "fixtures_to": {
+            "type": "string"
+        },
+        "fixtures_round": {
+            "type": "string"
+        },
+        "fixtures_status": {
+            "type": "string"
+        },
+        "fixtures_timezone": {
+            "type": "string"
+        }
+    },
+    "required": ["api_key"],
+    "allOf": [
+        {
+            "anyOf": [
+                {"required": ["fixtures_id"]},
+                {"required": ["fixtures_live"]},
+                {"required": ["fixtures_date"]},
+                {"required": ["fixtures_league"]},
+                {"required": ["fixtures_season"]},
+                {"required": ["fixtures_team"]},
+                {"required": ["fixtures_last"]},
+                {"required": ["fixtures_next"]},
+                {"required": ["fixtures_from"]},
+                {"required": ["fixtures_to"]},
+                {"required": ["fixtures_round"]},
+                {"required": ["fixtures_status"]},
+                {"required": ["fixtures_timezone"]}
+            ]
+        }
+    ]   
+}
