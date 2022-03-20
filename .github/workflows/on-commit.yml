@@ -34,7 +34,8 @@ jobs:
           cd taps/tap-fpl
           poetry install
       - name: Run Tests
-        run: poetry run pytest
-
+        run: |
+          cd taps/tap-fpl
+          poetry run pytest
 
 
