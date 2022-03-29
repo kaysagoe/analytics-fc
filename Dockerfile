@@ -9,7 +9,9 @@ RUN pip install -r requirements.txt
 
 # Install all plugins into the `.meltano` directory
 COPY ./meltano.yml .
-COPY ./tap-fpl ./tap-fpl
+COPY ./install_chrome_chromedriver.sh .
+RUN chmod +x install_chrome_chromedriver.sh
+RUN /bin/bash -c ./install_chrome_chromedriver.sh
 
 RUN meltano install
 
