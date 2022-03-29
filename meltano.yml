@@ -5,85 +5,90 @@ plugins:
   extractors:
   - name: tap-fpl
     namespace: tap_fpl
-    pip_url: -e ./taps/tap-fpl
+    pip_url: git+https://github.com/kaysagoe/tap-fpl
+    capabilities:
+    - discover
+    - catalog
     settings:
     - name: managers
+      kind: array
     - name: gameweeks
+      kind: array
     - name: players
+      kind: array
     - name: league_id
+      kind: integer
     load_schema: raw_fpl
   - name: tap-apifootball
     namespace: tap_apifootball
-    pip_url: -e ./taps/tap-apifootball
+    pip_url: git+https://github.com/kaysagoe/tap-apifootball
+    capabilities:
+    - discover
+    - catalog
     settings:
-    - name: fixtures_league
-    - name: fixtures_season
-    - name: statistics_fixture
-    - name: events_fixture
-    - name: lineups_fixture
-    - name: player_statistics_fixture
     - name: api_key
+    - name: id
+      kind: integer
+    - name: live
+    - name: date
+    - name: season
+      kind: integer
+    - name: team
+      kind: integer
+    - name: last
+      kind: integer
+    - name: next
+      kind: integer
+    - name: from
+    - name: to
+    - name: round
+    - name: status
+    - name: timezone
+    - name: fixture
+      kind: integer
+    - name: team
+      kind: integer
+    - name: type
+    - name: player
+      kind: integer
     load_schema: raw_api_football
+  - name: tap-sofifa
+    namespace: tap_sofifa
+    pip_url: git+https://github.com/kaysagoe/tap-sofifa
+    capabilities:
+    - discover
+    - catalog
+    settings:
+    - name: game_year
+      kind: integer
+    - name: league_id
+      kind: integer
+    - name: change_id
+      kind: integer
+    - name: player_id
+      kind: integer
+    load_schema: raw_tap_sofifa
   loaders:
-  - name: target-postgres
-    variant: transferwise
-    pip_url: pipelinewise-target-postgres
-    config:
-      primary_key_required: false
   - name: target-tester
     namespace: target_tester
-    pip_url: -e ./target-tester
+    pip_url: git+https://github.com/kaysagoe/target-tester
+  - name: target-parquet
+    namespace: target_parquet
+    pip_url: git+https://github.com/estrategiahq/target-parquet.git
+    settings:
+    - name: disable_collection
+    - name: logging_level
+    - name: destination_path
+    - name: compression_method
+    - name: streams_in_separate_folder
 environments:
 - name: dev-local
   config:
     plugins:
-      extractors:
-      - name: tap-apifootball
-        config:
-          fixtures_league: 39
-          fixtures_season: 2021
-          statistics_fixture: 710557
-          events_fixture: 710557
-          lineups_fixture: 710557
-          player_statistics_fixture: 710557
-      - name: tap-fpl
-        config:
-          managers:
-          - 2045181
-          - 1001292
-          gameweeks:
-          - 23
-          - 22
-          league_id: 180733
-          players:
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
-          - 6
-          - 7
-          - 8
-          - 9
-          - 10
       loaders:
-      - name: target-postgres
+      - name: target-parquet
         config:
-          user: analytics-fc
-          password: analytics-fc
-          host: 0.0.0.0
-          port: 5432
-          dbname: dwh
+          destination_path: /tmp
 - name: dev-docker
-  config:
-    plugins:
-      loaders:
-      - name: target-postgres
-        config:
-          user: analytics-fc
-          password: analytics-fc
-          host: dwh
-          port: 5432
-          dbname: dwh
 - name: ci
 - name: prod
